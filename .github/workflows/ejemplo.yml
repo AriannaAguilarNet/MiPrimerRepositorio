@@ -9,7 +9,13 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Hola mundo"
-      -name: multiline script
+      - name: multiline script
         run: |
           node -v
           npm -v 
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+          shell: python
+
